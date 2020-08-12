@@ -1,7 +1,7 @@
 <Project>
 	<PropertyGroup>
 		<PackageProjectUrl>https://github.com/tylerjensen/ServiceWire</PackageProjectUrl>
-		<PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
+		<License>license.txt</License>
 		<Authors>Tyler Jensen</Authors>
 		<PackageTags>WCF;Services;Host;Client;NamedPipes;TCP;Messaging;Serialization;</PackageTags>
 		<RepositoryUrl>https://github.com/SubSonic-Core/SubSonic.Core.ServiceWire</RepositoryUrl>

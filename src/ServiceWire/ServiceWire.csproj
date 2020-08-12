@@ -9,10 +9,10 @@
 
   <PropertyGroup>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>Tyler Jensen; Kenneth Carter</Authors>
+    <Authors>Kenneth Carter</Authors>
     <Company>SubSonic Core</Company>
-    <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
-    <Copyright>Tyler Jensen 2013-2020</Copyright>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <Copyright>SubSonic Core 2020 - PRESENT</Copyright>
     <Version>5.3.4</Version>
     <Description>ServiceWire is a very fast and light weight service host and dynamic client library that simplifies the development and use of high performance remote procedure call (RPC) communication between .NET processes over Named Pipes or TCP/IP. And with the release of 2.0.0, ServiceWire now supports optional use of Zero Knowledge authentication with a fast variation of Secure Remote Password Protocol and strong Rijndael encryption of data across the wire via TCP without the need for public keys going across the wire.
 
@@ -24,6 +24,7 @@ project fork of service wire</Description>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageId>SubSonic.Core.ServiceWire</PackageId>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -49,6 +50,13 @@ project fork of service wire</Description>
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ServiceWireResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\License.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
