@@ -3,6 +3,7 @@
 SubSonic.Core.ServiceWire
 =========================
 1. implements additional typemapping so System.Uri can be mapped between framework and netcore runtimes
+2. Assembly is strong named
 
 ServiceWire
 ===========
