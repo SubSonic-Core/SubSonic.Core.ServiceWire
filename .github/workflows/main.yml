@@ -29,7 +29,7 @@ jobs:
       run: |
         rsync -a ${DOTNET_ROOT/3.1.302/2.1.809}/* $DOTNET_ROOT/
     - name: Install dependencies
-      run:  src/dotnet restore src/serviceWire.sln
+      run:  src/dotnet restore 
     - name: Build
       run: dotnet build src/serviceWire.sln --configuration Release --no-restore
     - name: Testing
