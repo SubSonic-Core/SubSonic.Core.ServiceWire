@@ -1,0 +1,35 @@
+name: .NET Core
+
+on:      
+  push:
+    branches: [ release/* ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      working-directory: ./src
+      VERSION: 5.4.0
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core 3.1.101
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Install dependencies
+      run:  dotnet restore 
+      working-directory: ${{env.working-directory}}
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ${{env.working-directory}}
+    - name: Testing
+      run: dotnet test
+      working-directory: ${{env.working-directory}}
+    - name: Create Packages
+      run: dotnet pack --configuration Release --output ../nupkgs -p:PackageVersion=${{env.VERSION}} --include-source --include-symbols
+      working-directory: ${{env.working-directory}}
+    - name: Deploy Package Nuget
+      run: dotnet nuget push -k ${{secrets.NUGET_API_TOKEN}} -s https://api.nuget.org/v3/index.json ../nupkgs/*.${{env.VERSION}}.nupkg --skip-duplicate
+      working-directory: ${{env.working-directory}}
