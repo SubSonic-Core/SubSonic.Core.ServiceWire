@@ -202,6 +202,8 @@ namespace ServiceWireTests
         public void Dispose()
         {
             _nphost.Close();
+            _nphost.Dispose();
+            _nphost = null;
         }
     }
 }
