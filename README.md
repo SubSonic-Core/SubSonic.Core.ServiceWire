@@ -1,4 +1,4 @@
-![.NET Core](https://github.com/SubSonic-Core/SubSonic.Core.ServiceWire/workflows/.NET%20Core/badge.svg)
+![.NET Core](https://github.com/SubSonic-Core/SubSonic.Core.ServiceWire/workflows/.NET%20Core/badge.svg)![Nuget](https://img.shields.io/nuget/v/SubSonic.Core.ServiceWire)![Downloads](https://img.shields.io/nuget/dt/SubSonic.Core.ServiceWire)
 
 SubSonic.Core.ServiceWire
 =========================
