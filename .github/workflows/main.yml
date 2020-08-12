@@ -16,10 +16,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Setup .NET Core 2.1.809
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.1.809
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.101
+    - name: Setup side by side .NET SDKs on ${{ matrix.os }}
+      if: matrix.os != 'windows-latest'
+      run: |
+        rsync -a ${DOTNET_ROOT/3.1.302/2.1.809}/* $DOTNET_ROOT/
     - name: Install dependencies
       run: dotnet restore
     - name: Build
