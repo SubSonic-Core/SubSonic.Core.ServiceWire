@@ -1,4 +1,8 @@
-[![tylerjensen](https://circleci.com/gh/tylerjensen/ServiceWire.svg?style=shield)](https://circleci.com/gh/tylerjensen/ServiceWire)
+![.NET Core](https://github.com/SubSonic-Core/SubSonic.Core.ServiceWire/workflows/.NET%20Core/badge.svg)
+
+SubSonic.Core.ServiceWire
+=========================
+1. implements additional typemapping so System.Uri can be mapped between framework and netcore runtimes
 
 ServiceWire
 ===========
