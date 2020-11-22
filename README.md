@@ -83,7 +83,7 @@ ServiceWire's dynamically generated proxy will NOT run as x86 on an x64 system. 
 
 ### Get It on Nuget
 
-Get the [NuGet package here][https://www.nuget.org/packages/SubSonic.Core.ServiceWire/].
+Get the [NuGet package here][].
 
 ### Using the library is easy. 
 
